@@ -1,25 +1,33 @@
+import { signOut } from 'firebase/auth';
 import React from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { NavLink } from 'react-router-dom';
+import auth from '../firebase.init';
+import Loading from './Loading';
 
 const Navbar = () => {
 
+    const [user, loading] = useAuthState(auth)
+
     const menuItems = <>
-        <li><NavLink to='/'>Item 1</NavLink> </li>
-        <li tabindex="0">
-            <NavLink to='/'>
-                Parent
-                <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" /></svg>
-            </NavLink> 
-            <ul class="p-2">
-                <li><NavLink to='/'>Submenu 1</NavLink> </li>
-                <li><NavLink to='/'>Submenu 2</NavLink> </li>
-            </ul>
-        </li>
-        <li><NavLink to='/'>Item 3</NavLink> </li>
+        <li><NavLink to='/'>Home</NavLink> </li>
+        {user ? <>
+            {user.photoURL ? <img className="avatar w-12 cursor-pointer rounded-full" src={user?.photoURL} alt="" /> :
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 mt-1 " viewBox="0 0 20 20" fill="currentColor">
+                    <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z" clipRule="evenodd" />
+                </svg>
+            }
+            <button className='btn btn-ghost' onClick={() => signOut(auth)}>Sign Out</button>
+        </> : <>
+            <li><NavLink to='/login'>Login</NavLink> </li>
+            <li><NavLink to='/signup'>Sign Up</NavLink> </li>
+        </>}
     </>
 
+    if (loading) return <Loading></Loading>
+
     return (
-        <div class="navbar bg-base-200 fixed top-0 z-50 lg:px-12">
+        <div class="navbar bg-base-300 fixed top-0 z-50 lg:px-12">
             <div class="navbar-start">
                 <div class="dropdown">
                     <label tabindex="0" class="btn btn-ghost lg:hidden">
@@ -29,9 +37,9 @@ const Navbar = () => {
                         {menuItems}
                     </ul>
                 </div>
-                <NavLink to='/' class="btn btn-ghost uppercase text-2xl">
+                <h1 class="btn btn-ghost uppercase text-xl lg:text-3xl">
                     Aurora Car Parts
-                </NavLink> 
+                </h1>
             </div>
             <div class="navbar-end hidden lg:flex">
                 <ul class="menu menu-horizontal p-0 gap-4">
