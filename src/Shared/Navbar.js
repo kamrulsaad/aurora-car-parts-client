@@ -1,16 +1,17 @@
 import { signOut } from 'firebase/auth';
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import auth from '../firebase.init';
-import Loading from './Loading';
 
 const Navbar = () => {
 
-    const [user, loading] = useAuthState(auth)
+    const [user] = useAuthState(auth)
 
     const menuItems = <>
         <li><NavLink to='/'>Home</NavLink> </li>
+        <li><NavLink to='/allproducts'>All products</NavLink> </li>
+        {user && <li><NavLink to='/dashboard'>Dashboard</NavLink> </li>}
         {user ? <>
             {user.photoURL ? <img className="avatar w-12 cursor-pointer rounded-full" src={user?.photoURL} alt="" /> :
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 mt-1 " viewBox="0 0 20 20" fill="currentColor">
@@ -24,8 +25,6 @@ const Navbar = () => {
         </>}
     </>
 
-    if (loading) return <Loading></Loading>
-
     return (
         <div class="navbar bg-base-300 fixed top-0 z-50 lg:px-12">
             <div class="navbar-start">
@@ -38,7 +37,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <h1 class="btn btn-ghost uppercase text-xl lg:text-3xl">
-                    Aurora Car Parts
+                    <Link to='/'>Aurora Car Parts</Link>
                 </h1>
             </div>
             <div class="navbar-end hidden lg:flex">

@@ -1,9 +1,9 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import ProductsCard from './ProductsCard';
+import Loading from '../../Shared/Loading';
+import ProductsCard from '../Home/ProductsCard';
 
-const Parts = () => {
+const AllProducts = () => {
 
   const [products, setProducts] = useState([])
 
@@ -12,10 +12,10 @@ const Parts = () => {
       .then(data => setProducts(data.data))
   }, [])
 
-  const threeProducts = products.slice(-3)
+  if(!products.length) return <Loading></Loading>
 
   return (
-    <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+    <div className="px-4 mt-3 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
       <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
         <div>
           <p className="badge text-white">
@@ -53,12 +53,11 @@ const Parts = () => {
       </div>
       <div className="grid max-w-md gap-10 row-gap-8 lg:max-w-screen-lg sm:row-gap-10 lg:grid-cols-3 xl:max-w-screen-lg sm:mx-auto">
 
-        {threeProducts.map(pd => <ProductsCard key={pd._id} pd={pd} />)}
+        {products.map(pd => <ProductsCard key={pd._id} pd={pd} />)}
 
       </div>
-      <Link to='/allproducts'><button className='btn btn-secondary block mx-auto my-4'>All Products</button></Link>
     </div>
   );
 };
 
-export default Parts;
+export default AllProducts;
