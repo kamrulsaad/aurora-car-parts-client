@@ -1,0 +1,92 @@
+[
+    {
+      "price": 3001.34,
+      "img": "https://i.ibb.co/6Z9hdK1/front-hood.jpg",
+      "stock": 10248,
+      "name": "/front hood"
+    },
+    {
+      "price": 3514.37,
+      "img": "https://i.ibb.co/BNC5sbz/headlight.jpg",
+      "stock": 13790,
+      "name": "headlight"
+    },
+    {
+      "price": 2509.42,
+      "img": "https://i.ibb.co/s3DxHtB/oil-flow-tube.jpg",
+      "stock": 8892,
+      "name": "oil flow tube"
+    },
+    {
+      "price": 3084.98,
+      "img": "https://i.ibb.co/stdFXZW/pliers.jpg",
+      "stock": 12048,
+      "name": "Pliers"
+    },
+    {
+      "price": 1288.13,
+      "img": "https://i.ibb.co/FY9G9Xx/screwdrivers.jpg",
+      "stock": 13116,
+      "name": "screwdrivers"
+    },
+    {
+      "price": 3458.52,
+      "img": "https://i.ibb.co/hmqyRqv/screw-remover.jpg",
+      "stock": 17262,
+      "name": "screw remover"
+    },
+    {
+      "price": 1998.7,
+      "img": "https://i.ibb.co/64CNXbT/Tires-collection.jpg",
+      "stock": 12874,
+      "name": "Tires collection"
+    },
+    {
+      "price": 2598.71,
+      "img": "https://i.ibb.co/xLdrq6h/toolbox-full-set.jpg",
+      "stock": 16728,
+      "name": "toolbox full set"
+    },
+    {
+      "price": 3570.55,
+      "img": "https://i.ibb.co/ZBB2wXV/top-category-engine-and-drivetrain.jpg",
+      "stock": 8371,
+      "name": "top category engine and drivetrain"
+    },
+    {
+      "price": 2677.71,
+      "img": "https://i.ibb.co/4fzjsH6/all-tools-package.jpg",
+      "stock": 12750,
+      "name": "all tools package"
+    },
+    {
+      "price": 3247.31,
+      "img": "https://i.ibb.co/Yyw4s1h/basic-toolkit.jpg",
+      "stock": 13302,
+      "name": "basic toolkit"
+    },
+    {
+      "price": 3464.62,
+      "img": "https://i.ibb.co/kHSBdPR/beta-tires-collection.jpg",
+      "stock": 7411,
+      "name": "beta tires collection"
+    },
+    {
+      "price": 2254.16,
+      "img": "https://i.ibb.co/8XkDD7v/custom-made-front-logo.jpg",
+      "stock": 7805,
+      "name": "custom made front logo"
+    },
+    {
+      "price": 3569.69,
+      "img": "https://i.ibb.co/ygP2Dqh/engine-module.jpg",
+      "stock": 5042,
+      "name": "engine module"
+    },
+    {
+      "price": 3441.59,
+      "img": "https://i.ibb.co/1nqTRFF/engine-pistons.jpg",
+      "stock": 10989,
+      "name": "engine pistons"
+    }
+  ]
