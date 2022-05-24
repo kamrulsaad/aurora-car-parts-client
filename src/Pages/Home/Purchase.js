@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useParams } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
 import ProductsCard from './ProductsCard';
 
@@ -30,10 +31,20 @@ const Purchase = () => {
             productId : product._id,
             payableAmount : product.price* purchaseAmount,
             purchaseAmount,
+            phone: e.target.phone.value,
+            address: e.target.address.value,
             userName: e.target.userName.value,
             email: e.target.email.value,
         }
-        console.log(purchase);
+
+        axios.post('http://localhost:5000/purchase', purchase)
+        .then(data => {
+            if(data.data.success) {
+                toast.success(`Your Order for ${product.name} has been Placed`)
+            }
+        })
+
+        e.target.reset()
     }
 
     return (
