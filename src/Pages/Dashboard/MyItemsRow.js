@@ -1,10 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import axiosPrivate from '../../API/axiosPrivate';
 
 const MyItemsRow = ({ index, od, refetch }) => {
 
-    const { product, purchaseAmount, payableAmount, paid, _id } = od
+    const { product, purchaseAmount, payableAmount, paid, _id, transactionId } = od
 
     const handleDelete = () => {
         Swal.fire({
@@ -18,7 +19,7 @@ const MyItemsRow = ({ index, od, refetch }) => {
           }).then((result) => {
             if (result.isConfirmed) {
                 axiosPrivate.delete(`http://localhost:5000/purchase?id=${_id}`)
-                refetch()
+                .then(() => refetch())
               Swal.fire(
                 'Deleted!',
                 'Your file has been deleted.',
@@ -36,9 +37,10 @@ const MyItemsRow = ({ index, od, refetch }) => {
             <td>{purchaseAmount}</td>
             <td>${Math.floor(payableAmount)}</td>
             <td>
-                {(!paid) && <>
-                    <button className='btn btn-xs btn-success mr-4'>Pay Now</button>
-                    <button onClick={handleDelete} className='btn btn-xs btn-error '>Cancel Order</button>
+                {paid ? <div className='w-fit'><span className='btn btn-xs btn-success'>Paid</span>
+                <span className='ml-2'>Transaction Id: <span className='font-bold'>{transactionId}</span> </span></div> : <>
+                    <Link to={`/dashboard/payment/${_id}`}><button className='btn btn-sm btn-accent mr-4'>Pay Now</button></Link>
+                    <button onClick={handleDelete} className='btn btn-sm btn-error '>Cancel Order</button>
                 </>}
             </td>
         </tr>

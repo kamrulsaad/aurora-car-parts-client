@@ -12,7 +12,7 @@ const Parts = () => {
       .then(data => setProducts(data.data))
   }, [])
 
-  const threeProducts = products.slice(-3)
+  const sixProducts = products.slice(-6)
 
   return (
     <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
@@ -53,7 +53,7 @@ const Parts = () => {
       </div>
       <div className="grid max-w-md gap-10 row-gap-8 lg:max-w-screen-lg sm:row-gap-10 lg:grid-cols-3 xl:max-w-screen-lg sm:mx-auto">
 
-        {threeProducts.map(pd => <ProductsCard key={pd._id} pd={pd} />)}
+        {sixProducts.map(pd => <ProductsCard key={pd._id} pd={pd} />)}
 
       </div>
       <Link to='/allproducts'><button className='btn btn-secondary block mx-auto my-4'>All Products</button></Link>

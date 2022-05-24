@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import axiosPrivate from '../../API/axiosPrivate';
 import auth from '../../firebase.init';
 import ProductsCard from './ProductsCard';
 
@@ -14,7 +15,7 @@ const Purchase = () => {
     const [amountError, setAmountError] = useState('')
 
     useEffect(() => {
-        axios.get(`http://localhost:5000/purchase/${id}`)
+        axiosPrivate.get(`http://localhost:5000/purchase/${id}`)
             .then(data => setProduct(data.data))
     }, [id])
 
@@ -29,7 +30,7 @@ const Purchase = () => {
         const purchase = {
             product : product.name,
             productId : product._id,
-            payableAmount : product.price* purchaseAmount,
+            payableAmount : Math.round(product.price* purchaseAmount),
             purchaseAmount,
             phone: e.target.phone.value,
             address: e.target.address.value,
