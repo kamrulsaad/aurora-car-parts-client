@@ -24,6 +24,7 @@ const Payment = () => {
     return (
         <div class="card w-96 bg-base-100 shadow-xl mt-10">
             <div class="card-body items-center text-center">
+                <h1 className='text-center font-bold text-xl underline'>Order Details</h1>
                 <h2 class="card-title capitalize">Hello <span className='text-accent font-bold'>{user.displayName},</span></h2>
                 <p>Please pay for: <span className="capitalize">{product?.data?.product}</span></p>
                 <p>Ordered Amount: <span className="capitalize">{product?.data?.purchaseAmount}</span></p>
