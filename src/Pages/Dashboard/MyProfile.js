@@ -2,7 +2,7 @@ import React from 'react';
 
 const MyProfile = () => {
     return (
-        <div className='mt-16'>
+        <div>
             <h1 className='text-xl font-semibold'>My Profile</h1>
         </div>
     );
