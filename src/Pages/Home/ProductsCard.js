@@ -1,11 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const ProductsCard = ({pd}) => {
 
-    const {name, price, img, stock} = pd
+    const {name, price, img, stock, _id} = pd
 
     return (
-        <div className="flex flex-col transition duration-300 bg-white rounded shadow-sm hover:shadow">
+        <div className="flex flex-col m-2 transition duration-300 bg-white rounded shadow-sm hover:shadow">
             <div className="relative w-full h-48">
                 <img
                     src={img}
@@ -26,12 +27,12 @@ const ProductsCard = ({pd}) => {
                        Price: ${price}
                     </div>
                 </div>
-                <a
-                    href="/"
-                    className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-primary hover:bg-primary focus:shadow-outline focus:outline-none"
+                <Link
+                    to={`/purchase/${_id}`}
+                    className={`inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-primary hover:bg-primary focus:shadow-outline focus:outline-none `}
                 >
                     Purchase Now 
-                </a>
+                </Link>
             </div>
         </div>
     );
