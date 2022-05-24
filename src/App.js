@@ -1,12 +1,13 @@
 import { Route, Routes } from "react-router-dom";
 import AllProducts from "./Pages/AllProducts/Allproducts";
+import Dashboard from "./Pages/Dashboard/Dashboard";
 import Home from "./Pages/Home/Home";
 import Purchase from "./Pages/Home/Purchase";
 import Login from "./Pages/Login/Login";
 import SignUp from "./Pages/Login/SignUp";
+import Footer from "./Pages/Shared/Footer";
+import Navbar from "./Pages/Shared/Navbar";
 import RequireAuth from "./Pages/Shared/RequireAuth";
-import Footer from "./Shared/Footer";
-import Navbar from "./Shared/Navbar";
 
 function App() {
   return (
@@ -18,6 +19,9 @@ function App() {
         <Route path="/signup" element={<SignUp></SignUp>}></Route>
         <Route path="/allproducts" element={<AllProducts></AllProducts>}></Route>
         <Route path="/purchase/:id" element={<RequireAuth><Purchase></Purchase></RequireAuth>}></Route>
+        <Route path="/dashboard" element={<RequireAuth><Dashboard></Dashboard></RequireAuth>}>
+          <Route index element={<Dashboard></Dashboard>}></Route>
+        </Route>
       </Routes>
       <Footer></Footer>
     </div>

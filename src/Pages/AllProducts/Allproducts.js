@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import Loading from '../../Shared/Loading';
 import ProductsCard from '../Home/ProductsCard';
+import Loading from '../Shared/Loading';
 
 const AllProducts = () => {
 

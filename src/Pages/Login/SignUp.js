@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form';
 import { useCreateUserWithEmailAndPassword, useSignInWithGoogle, useUpdateProfile } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
-import Loading from '../../Shared/Loading';
+import Loading from '../Shared/Loading';
 
 const SignUp = () => {
 

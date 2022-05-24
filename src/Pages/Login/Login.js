@@ -3,7 +3,7 @@ import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-fireba
 import { useForm } from 'react-hook-form';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
-import Loading from '../../Shared/Loading';
+import Loading from '../Shared/Loading';
 
 const Login = () => {
 

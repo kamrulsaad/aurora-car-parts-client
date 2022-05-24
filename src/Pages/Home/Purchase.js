@@ -15,7 +15,11 @@ const Purchase = () => {
             .then(data => setProduct(data.data))
     }, [id])
 
-    const onSubmit = data => console.log(data)
+    const onSubmit = data => {
+        console.log(data)
+    }
+
+    console.log(errors);
 
     return (
         <div className='mt-20 min-h-screen flex flex-wrap gap-20 items-center justify-center'>
@@ -49,36 +53,10 @@ const Purchase = () => {
                             <label className="label">
                                 {errors.amount?.type === 'required' && <span className="label-text-alt text-red-600">{errors.amount.message}</span>}
                                 {errors.amount?.type === 'min' && <span className="label-text-alt text-red-600">{errors.amount.message}</span>}
+                                {errors.amount?.type === 'max' && <span className="label-text-alt text-red-600">{errors.amount.message}</span>}
                             </label>
                         </div>
-
-                        <div className="form-control w-full max-w-xs">
-                            <label className="label">
-                                <span className="label-text">Password</span>
-                            </label>
-                            <input {...register("password", {
-                                required: {
-                                    value: true,
-                                    message: "Please enter your password"
-                                },
-                                minLength: {
-                                    value: 6,
-                                    message: 'Password must be 6 characters or long'
-                                }
-                            })}
-                                type="password"
-                                placeholder="Password"
-                                className="input input-bordered w-full" />
-                            <label className="label">
-                                {errors.password?.type === 'required' && <span className="label-text-alt text-red-600">{errors.password.message}</span>}
-                                {errors.password?.type === 'minLength' && <span className="label-text-alt text-red-600">{errors.password.message}</span>}
-
-                            </label>
-                        </div>
-
-
-
-                        <input className='btn btn-outline btn-primary w-full' value='login' type="submit" />
+                        <input className='btn btn-primary w-full' value='Place order' type="submit" />
 
                     </form>
                 </div>
