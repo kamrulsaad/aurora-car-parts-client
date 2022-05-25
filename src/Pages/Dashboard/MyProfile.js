@@ -15,7 +15,7 @@ const MyProfile = () => {
 
     if (isLoading) return <Loading></Loading>
 
-    const { education, location, phone, linkedIn, image, name } = userData.data
+    const { education, location, phone, linkedIn, image, name, role } = userData.data
 
     const onSubmit = async data => {
         const imgbbAPIkey = '74922ada22c311f177ebbc5022b4cfed';
@@ -69,6 +69,9 @@ const MyProfile = () => {
                     </figure>
                     <div class="card-body items-center text-center">
                         <h2 class="card-title">{name || user?.displayName}</h2>
+                        {
+                            role && <span className='badge badge-success'>{role}</span>
+                        }
                         <p>Email: {user?.email}</p>
                         {
                             location && <>
