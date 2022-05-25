@@ -1,15 +1,6 @@
 import React from 'react';
-import { useQuery } from 'react-query';
-import axiosPrivate from '../../API/axiosPrivate';
-import Loading from '../Shared/Loading';
-import ManageProductsRow from './ManageProductsRow';
 
-const MaanageProducts = () => {
-
-    const {data: products, isLoading, refetch} = useQuery('products', () => axiosPrivate.get('http://localhost:5000/products'))
-
-    if(isLoading) return <Loading></Loading>
-
+const ManageOrders = () => {
     return (
         <div className='w-full'>
             <h1 className='text-center font-semibold text-xl mb-2'>Manage Products</h1>
@@ -25,9 +16,7 @@ const MaanageProducts = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {
-                            products.data.map((pd, index) => <ManageProductsRow key={pd._id} pd={pd} refetch={refetch} index={index} ></ManageProductsRow>)
-                        }
+                        
                     </tbody>
                 </table>
             </div>
@@ -35,4 +24,4 @@ const MaanageProducts = () => {
     );
 };
 
-export default MaanageProducts;
+export default ManageOrders;

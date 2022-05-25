@@ -57,7 +57,7 @@ const MyProfile = () => {
         <div className='w-full'>
             <h1 className='text-xl text-center font-semibold'>My Profile</h1>
             <div className=' mt-2 flex flex-wrap gap-20 items-center justify-center'>
-                <div class="card w-96 bg-base-200 shadow-xl">
+                <div class="card w-96 bg-base-100 shadow-xl">
                     <figure class="px-10 pt-10">
                         {
                             (user.photoURL || image) ?
