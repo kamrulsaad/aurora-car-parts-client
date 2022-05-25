@@ -15,7 +15,7 @@ const Parts = () => {
 
   if(!products.length) return <Loading></Loading>
 
-  const sixProducts = products.slice(-6)
+  const sixProducts = products.slice(0,6)
 
   return (
     <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">

@@ -17,6 +17,7 @@ import Navbar from "./Pages/Shared/Navbar";
 import RequireAuth from "./Pages/Shared/RequireAuth";
 import RequireAdmin from "./Pages/Shared/RequireAdmin";
 import AddProduct from "./Pages/Dashboard/AddProduct";
+import NotFound from "./Pages/Shared/NotFound";
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
           <Route path="/dashboard/addProduct" element={<RequireAdmin><AddProduct></AddProduct></RequireAdmin>}></Route>
           <Route path="/dashboard/payment/:id" element={<Payment></Payment>}></Route>
         </Route>
+        <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
       <ToastContainer position="top-center" transition={Slide}></ToastContainer>
