@@ -1,8 +1,9 @@
 import { Route, Routes } from "react-router-dom";
-import { ToastContainer } from "react-toastify";
+import { Slide, ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import AllProducts from "./Pages/AllProducts/Allproducts";
 import AddReview from "./Pages/Dashboard/AddReview";
+import AllUsers from "./Pages/Dashboard/AllUsers";
 import Dashboard from "./Pages/Dashboard/Dashboard";
 import MyItems from "./Pages/Dashboard/MyItems";
 import MyProfile from "./Pages/Dashboard/MyProfile";
@@ -29,11 +30,12 @@ function App() {
           <Route index element={<MyItems></MyItems>}></Route>
           <Route path="/dashboard/myProfile" element={<MyProfile></MyProfile>}></Route>
           <Route path="/dashboard/addReview" element={<AddReview></AddReview>}></Route>
+          <Route path="/dashboard/allUsers" element={<AllUsers></AllUsers>}></Route>
           <Route path="/dashboard/payment/:id" element={<Payment></Payment>}></Route>
         </Route>
       </Routes>
       <Footer></Footer>
-      <ToastContainer></ToastContainer>
+      <ToastContainer position="top-center" transition={Slide}></ToastContainer>
     </div>
   );
 }

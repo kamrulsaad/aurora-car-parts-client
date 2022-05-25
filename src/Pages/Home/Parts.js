@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import Loading from '../Shared/Loading';
 import ProductsCard from './ProductsCard';
 
 const Parts = () => {
@@ -11,6 +12,8 @@ const Parts = () => {
     axios.get('http://localhost:5000/products')
       .then(data => setProducts(data.data))
   }, [])
+
+  if(!products.length) return <Loading></Loading>
 
   const sixProducts = products.slice(-6)
 

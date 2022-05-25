@@ -14,7 +14,7 @@ const ReviewCard = ({ review }) => {
     return (
         <div className="p-8 bg-white border rounded shadow-sm">
             <p className=" text-xs font-semibold tracking-wide uppercase">
-                <span className="text-gray-800">{hours}:{minutes} on {date}/{month}/{year}</span>
+                <span className="text-gray-800">{hours}:{minutes} on {date}/{month + 1}/{year}</span>
             </p>
             <ReactStars {...firstExample} />
             <p className="mb-5 text-gray-700">

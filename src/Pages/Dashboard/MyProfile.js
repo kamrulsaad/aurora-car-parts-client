@@ -75,7 +75,7 @@ const MyProfile = () => {
                                 <p>Location: {location}</p>
                                 <p>Education: {education}</p>
                                 <p>Phone: {phone}</p>
-                                <p>LinkedIn: <a className='underline inline' href={linkedIn} target="_blank" rel="noopener noreferrer">{linkedIn}</a> </p>
+                                <p><a className='underline inline' href={linkedIn} target="_blank" rel="noopener noreferrer">LinkedIn Profile</a> </p>
                             </>
                         }
                     </div>
