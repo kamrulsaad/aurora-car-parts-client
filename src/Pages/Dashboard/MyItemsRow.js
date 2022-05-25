@@ -22,7 +22,7 @@ const MyItemsRow = ({ index, od, refetch }) => {
                 .then(() => refetch())
               Swal.fire(
                 'Deleted!',
-                'Your file has been deleted.',
+                'Your booking has been cancelled.',
                 'success'
               )
             }
