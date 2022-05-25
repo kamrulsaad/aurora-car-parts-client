@@ -10,6 +10,7 @@ import ProductsCard from './ProductsCard';
 const Purchase = () => {
 
     const { id } = useParams()
+    const [disabled, setDisabled] = useState(false)
     const [product, setProduct] = useState({})
     const [user] = useAuthState(auth)
     const [amountError, setAmountError] = useState('')
@@ -25,7 +26,8 @@ const Purchase = () => {
         const purchaseAmount = parseInt(e.target.amount.value)
         if (purchaseAmount < 50 || purchaseAmount > product.stock) {
             setAmountError("Sorry, You cannot order less than 50 units or more than the available units in stock")
-            return
+            e.target.reset()
+            return setDisabled(true)
         }
         const purchase = {
             product : product.name,
@@ -100,7 +102,7 @@ const Purchase = () => {
                             <label className="label">
                                 <span className="label-text">Order Amount</span>
                             </label>
-                            <input defaultValue={50}
+                            <input onChange={() => setDisabled(false)} defaultValue={50}
                                 type="number" name='amount' required
                                 className="input input-bordered w-full" />
                             <label className="label">
@@ -108,7 +110,7 @@ const Purchase = () => {
                             </label>
                         </div>
 
-                        <input className='btn btn-primary w-full' value='Place order' type="submit" />
+                        <input disabled={disabled} className='btn btn-primary w-full' value='Place order' type="submit" />
 
                     </form>
                 </div>
