@@ -4,12 +4,14 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link, NavLink } from 'react-router-dom';
 import auth from '../../firebase.init';
 import Loading from './Loading';
+import useUsers from '../../hooks/useUsers'
 
 const Navbar = () => {
 
     const [user, loading] = useAuthState(auth)
+    const [userData, isLoading] = useUsers(user?.email)
 
-    if(loading) return <Loading></Loading>
+    if(loading || isLoading) return <Loading></Loading>
 
     const menuItems = <>
         <li><NavLink to='/'>Home</NavLink> </li>
@@ -20,7 +22,7 @@ const Navbar = () => {
         </>
         }
         {user ? <>
-            {user.photoURL ? <img className="avatar w-12 cursor-pointer rounded-full" src={user?.photoURL} alt="" /> :
+            {(userData.data.image || user.photoURL) ? <img className="avatar w-12 cursor-pointer rounded-full" src={userData.data.image || user?.photoURL} alt="" /> :
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 mt-1 " viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z" clipRule="evenodd" />
                 </svg>

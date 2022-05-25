@@ -7,8 +7,7 @@ const useToken = user => {
 
         const email = user?.user?.email
         const name = user?.user?.displayName
-        const image = user?.user?.photoURL
-        const currentUser = { email, name, image }
+        const currentUser = { email, name}
 
         if (email) {
             fetch(`http://localhost:5000/user/${email}`, {

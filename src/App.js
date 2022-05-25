@@ -15,6 +15,7 @@ import SignUp from "./Pages/Login/SignUp";
 import Footer from "./Pages/Shared/Footer";
 import Navbar from "./Pages/Shared/Navbar";
 import RequireAuth from "./Pages/Shared/RequireAuth";
+import RequireAdmin from "./Pages/Shared/RequireAdmin";
 
 function App() {
   return (
@@ -30,7 +31,7 @@ function App() {
           <Route index element={<MyItems></MyItems>}></Route>
           <Route path="/dashboard/myProfile" element={<MyProfile></MyProfile>}></Route>
           <Route path="/dashboard/addReview" element={<AddReview></AddReview>}></Route>
-          <Route path="/dashboard/allUsers" element={<AllUsers></AllUsers>}></Route>
+          <Route path="/dashboard/allUsers" element={<RequireAdmin><AllUsers></AllUsers></RequireAdmin>}></Route>
           <Route path="/dashboard/payment/:id" element={<Payment></Payment>}></Route>
         </Route>
       </Routes>

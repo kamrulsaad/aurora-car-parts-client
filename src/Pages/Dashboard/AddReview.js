@@ -4,13 +4,17 @@ import ReactStars from "react-rating-stars-component";
 import { toast } from 'react-toastify';
 import axiosPrivate from '../../API/axiosPrivate';
 import auth from '../../firebase.init';
+import useUsers from '../../hooks/useUsers';
+import Loading from '../Shared/Loading';
 
 const AddReview = () => {
 
     const [rating, setRating] = useState(0)
     const [user] = useAuthState(auth)
+    const [userData, isLoading] = useUsers(user.email) 
     const date = new Date()
     
+    if(isLoading) return <Loading></Loading>
 
     const ratingChanged = (newRating) => {
         setRating(newRating);
@@ -21,7 +25,7 @@ const AddReview = () => {
         const review = {
             rating, 
             comment: e.target.comment.value,
-            img: user?.photoURL,
+            img: userData.data.image || user?.photoURL,
             name: user?.displayName,
             date: date.getDate(),
             month: date.getMonth(),

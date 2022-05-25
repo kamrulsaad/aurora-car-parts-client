@@ -41,7 +41,7 @@ const MyProfile = () => {
                     axiosPrivate.put(`http://localhost:5000/update/${user?.email}`, updatedUser)
                         .then(res => {
                             if (res.data.acknowledged) {
-                                toast.success("Profile Updated SuccessFully")
+                                toast.success("Profile Updated Successfully")
                                 reset()
                                 refetch()
                             }
