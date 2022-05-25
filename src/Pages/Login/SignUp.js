@@ -112,7 +112,7 @@ const SignUp = () => {
 
                             <p className='text-red-500 mb-2 text-xs text-center'>{signInError && signInError.message}</p>
 
-                            <input className='btn btn-outline btn-primary w-full' value='login' type="submit" />
+                            <input className='btn btn-outline btn-primary w-full' value='Sign Up' type="submit" />
 
                         </form>
                         <p className='text-center'><small>Already have an account?<span className='text-primary'> <Link to='/login'> Log In</Link> </span></small></p>
