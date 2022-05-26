@@ -67,7 +67,6 @@ const Login = () => {
                             <div className="form-control w-full max-w-xs">
                                 <label className="label">
                                     <span className="label-text">Password</span>
-                                    <span className="label-text-alt">Forgot Password?</span>
                                 </label>
                                 <input {...register("password", {
                                     required: {

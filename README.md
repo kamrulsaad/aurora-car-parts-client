@@ -39,21 +39,21 @@ I have built this website following the requirements provided.
 - `firebase`
 - `react-firebase-hooks`
 - `tailwindCSS`
-- `tw-elements`
 - `daisyUI` 
+- `tw-elements`
 - `kitwind UI`
 - `sweet alert2`
 - `react-toastify` 
-- `jwt`
-- `node`
-- `mongoDB`
-- `cors`
-- `express`
-- `heroku`
+- `axios`
+- `axios-interceptors`
+- `react-hook-form`
+- `react-query`
+- `stripe`
 - `imgbb`
 - `photopea`
+- `heroicons`
 - `tinypng`
-- ``react-rating-star-component`
+- `react-rating-star-component`
 
 ------
 

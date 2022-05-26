@@ -22,7 +22,7 @@ const Payment = () => {
     if(isLoading || loading) return <Loading></Loading>
 
     return (
-        <div className="card w-96 bg-base-100 shadow-xl mt-10">
+        <div className="card sm:w-96 w-4/5 max-w-md bg-base-100 shadow-xl mt-10">
             <div className="card-body items-center text-center">
                 <h1 className='text-center font-bold text-xl underline'>Order Details</h1>
                 <h2 className="card-title capitalize">Hello <span className='text-accent font-bold'>{user.displayName},</span></h2>

@@ -89,7 +89,7 @@ const AddProduct = () => {
 
     return (
         <div className='h-fit mt-2 flex justify-center'>
-            <div className="card w-96 bg-base-200 shadow-xl">
+            <div className="card sm:w-96 w-4/5 bg-base-200 shadow-xl">
                 <div className="card-body">
                     <h2 className="text-xl font-semibold text-center uppercase ">Add Product</h2>
                     <form onSubmit={handleSubmit(onSubmit)}>

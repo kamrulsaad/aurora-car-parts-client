@@ -57,7 +57,7 @@ const MyProfile = () => {
         <div className='w-full'>
             <h1 className='text-xl text-center font-semibold'>My Profile</h1>
             <div className=' mt-2 flex flex-wrap gap-20 items-center justify-center'>
-                <div className="card w-96 bg-base-100 shadow-xl">
+                <div className="card sm:w-96 w-4/5 bg-base-100 shadow-xl">
                     <figure className="px-10 pt-10">
                         {
                             (user.photoURL || image) ?
@@ -83,7 +83,7 @@ const MyProfile = () => {
                         }
                     </div>
                 </div>
-                <div className="divider divider-horizontal"></div>
+                <div className="divider divider-horizontal hidden lg:flex"></div>
                 <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-200">
                     <form onSubmit={handleSubmit(onSubmit)} className="card-body">
 

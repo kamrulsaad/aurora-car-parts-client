@@ -24,8 +24,8 @@ const Purchase = () => {
         e.preventDefault()
         setAmountError('')
         const purchaseAmount = parseInt(e.target.amount.value)
-        if (purchaseAmount < 50 || purchaseAmount > product.stock) {
-            setAmountError("Sorry, You cannot order less than 50 units or more than the available units in stock")
+        if (purchaseAmount < product.minOrder || purchaseAmount > product.stock) {
+            setAmountError(`Sorry, You cannot order less than ${product.minOrder} units or more than ${product.stock}`)
             e.target.reset()
             return setDisabled(true)
         }
@@ -53,7 +53,7 @@ const Purchase = () => {
     return (
         <div className='mt-16 lg:mt-8 min-h-screen flex flex-wrap gap-20 items-center justify-center'>
             <ProductsCard pd={product} />
-            <div className="divider divider-horizontal"></div>
+            <div className="divider divider-horizontal hidden md:flex"></div>
 
             <div className="card w-96 bg-base-300 shadow-xl">
                 <div className="card-body">
@@ -102,7 +102,7 @@ const Purchase = () => {
                             <label className="label">
                                 <span className="label-text">Order Amount</span>
                             </label>
-                            <input onChange={() => setDisabled(false)} defaultValue={50}
+                            <input onChange={() => setDisabled(false)} defaultValue={product.minOrder}
                                 type="number" name='amount' required
                                 className="input input-bordered w-full" />
                             <label className="label">

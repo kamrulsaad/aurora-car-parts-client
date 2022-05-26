@@ -19,7 +19,7 @@ const PortfolioBottom = () => {
                     </p>
                 </div>
                 <div className="grid gap-6 row-gap-5 mb-8 lg:grid-cols-4 sm:row-gap-6 sm:grid-cols-2">
-                    <a href="/" aria-label="View Item">
+                    <a href="https://marvelous-toy-store.web.app/" aria-label="View Item">
                         <div className="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
                             <img
                                 className="object-cover w-full h-56 md:h-64 xl:h-80"
@@ -34,7 +34,7 @@ const PortfolioBottom = () => {
                             </div>
                         </div>
                     </a>
-                    <a href="/" aria-label="View Item">
+                    <a href="https://kamrulsaad.github.io/SunnySide-Agency-Landing-page-2/" aria-label="View Item">
                         <div className="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
                             <img
                                 className="object-cover w-full h-56 md:h-64 xl:h-80"
@@ -51,7 +51,7 @@ const PortfolioBottom = () => {
                             </div>
                         </div>
                     </a>
-                    <a href="/" aria-label="View Item">
+                    <a href="https://smart-photography-provider.web.app/" aria-label="View Item">
                         <div className="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
                             <img
                                 className="object-cover w-full h-56 md:h-64 xl:h-80"
@@ -66,7 +66,7 @@ const PortfolioBottom = () => {
                             </div>
                         </div>
                     </a>
-                    <a href="/" aria-label="View Item">
+                    <a href="https://doctors-portal-by-saad.web.app/" aria-label="View Item">
                         <div className="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
                             <img
                                 className="object-cover w-full h-56 md:h-64 xl:h-80"
