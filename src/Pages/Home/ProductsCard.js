@@ -6,7 +6,7 @@ const ProductsCard = ({pd}) => {
     const {name, price, img, stock, _id, minOrder, description} = pd
 
     return (
-        <div className="flex flex-col max-w-sm m-2 transition duration-300 bg-white rounded shadow-sm hover:shadow">
+        <div className="flex flex-col max-w-md m-2 transition duration-300 bg-white rounded shadow-sm hover:shadow">
             <div className="relative w-full h-48">
                 <img
                     src={img}
