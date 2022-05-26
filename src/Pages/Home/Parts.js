@@ -51,7 +51,7 @@ const Parts = () => {
             </svg>
             <span className="relative">Choose</span>
           </span>{' '}
-          from the following Products
+          from the following Parts/Tools
         </h2>
       </div>
       <div className="grid max-w-md gap-10 row-gap-8 lg:max-w-screen-lg sm:row-gap-10 lg:grid-cols-3 xl:max-w-screen-lg sm:mx-auto">

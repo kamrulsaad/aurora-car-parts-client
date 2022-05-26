@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const ProductsCard = ({pd}) => {
 
-    const {name, price, img, stock, _id} = pd
+    const {name, price, img, stock, _id, minOrder, description} = pd
 
     return (
         <div className="flex flex-col max-w-sm m-2 transition duration-300 bg-white rounded shadow-sm hover:shadow">
@@ -19,10 +19,9 @@ const ProductsCard = ({pd}) => {
                     <div className="text-lg font-semibold capitalize">{name}</div>
                     <p className='text-sm font-bold my-2'>In Stock: {stock} </p>
                     <p className="text-sm text-gray-900">
-                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                        doloremque.
+                        {description}
                     </p>
-                    <p className='text-sm font-bold my-2'>Minimum Order Quantity: 50</p>
+                    <p className='text-sm font-bold my-2'>Minimum Order Quantity: {minOrder}</p>
                     <div className="mt-1 mb-4 mr-1 text-xl font-bold ">
                        Price: ${price}
                     </div>

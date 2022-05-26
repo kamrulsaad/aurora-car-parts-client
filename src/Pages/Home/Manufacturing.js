@@ -2,7 +2,7 @@ import React from 'react';
 
 const Manufacturing = () => {
     return (
-        <div class="hero min-h-screen" style={{"background-image": "url(https://www.entertales.com/wp-content/uploads/carmanufacturers-7.jpg)"}}>
+        <div class="hero min-h-screen" style={{"backgroundImage": "url(https://www.entertales.com/wp-content/uploads/carmanufacturers-7.jpg)"}}>
             <div class="hero-overlay bg-opacity-60"></div>
             <div class="hero-content text-center text-neutral-content">
                 <div class="max-w-md">

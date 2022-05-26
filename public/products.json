@@ -1,107 +1,122 @@
 [
     {
-      "price": 3001.34,
+      "price": 13956,
+      "minOrder": 40,
       "img": "https://i.ibb.co/6Z9hdK1/front-hood.jpg",
       "stock": 10248,
-      "description": "",
-      "name": "front hood"
+      "description": "The best front hood for your car in most affordable cost.",
+      "name": "FRONT HOOD"
     },
     {
-      "price": 3514.37,
+      "price": 11160,
+      "minOrder": 30,
       "img": "https://i.ibb.co/BNC5sbz/headlight.jpg",
       "stock": 13790,
-      "description": "",
-      "name": "headlight"
+      "description": "Light on the head, keeps you away from dead",
+      "name": "HEADLIGHT"
     },
     {
-      "price": 2509.42,
+      "price": 13142,
+      "minOrder": 90,
       "img": "https://i.ibb.co/s3DxHtB/oil-flow-tube.jpg",
       "stock": 8892,
-      "description": "",
-      "name": "oil flow tube"
+      "description": "A tube which is not in the shape of a cube",
+      "name": "OIL FLOW TUBE"
     },
     {
-      "price": 3084.98,
+      "price": 17858,
+      "minOrder": 90,
       "img": "https://i.ibb.co/stdFXZW/pliers.jpg",
       "stock": 12048,
-      "description": "",
-      "name": "Pliers"
+      "description": "Using these pliers, you might get fliers",
+      "name": "PLIERS"
     },
     {
-      "price": 1288.13,
+      "price": 15126,
+      "minOrder": 80,
       "img": "https://i.ibb.co/FY9G9Xx/screwdrivers.jpg",
       "stock": 13116,
-      "description": "",
-      "name": "screwdrivers"
+      "description": "A screw which is perfect for the best morning brew",
+      "name": "SCREWDRIVERS"
     },
     {
-      "price": 3458.52,
+      "price": 15963,
+      "minOrder": 40,
       "img": "https://i.ibb.co/hmqyRqv/screw-remover.jpg",
       "stock": 17262,
       "description": "",
-      "name": "screw remover"
+      "name": "SCREW REMOVER"
     },
     {
-      "price": 1998.7,
+      "price": 19527,
+      "minOrder": 50,
       "img": "https://i.ibb.co/64CNXbT/Tires-collection.jpg",
       "stock": 12874,
       "description": "",
-      "name": "Tires collection"
+      "name": "TIRES COLLECTION"
     },
     {
-      "price": 2598.71,
+      "price": 18181,
+      "minOrder": 60,
       "img": "https://i.ibb.co/xLdrq6h/toolbox-full-set.jpg",
       "stock": 16728,
       "description": "",
-      "name": "toolbox full set"
+      "name": "TOOLBOX FULL SET"
     },
     {
-      "price": 3570.55,
+      "price": 18347,
+      "minOrder": 100,
       "img": "https://i.ibb.co/ZBB2wXV/top-category-engine-and-drivetrain.jpg",
       "stock": 8371,
       "description": "",
-      "name": "top category engine and drivetrain"
+      "name": "TOP CATEGORY ENGINE AND DRIVETRAIN"
     },
     {
-      "price": 2677.71,
+      "price": 13931,
+      "minOrder": 60,
       "img": "https://i.ibb.co/4fzjsH6/all-tools-package.jpg",
       "stock": 12750,
       "description": "",
-      "name": "all tools package"
+      "name": "ALL TOOLS PACKAGE"
     },
     {
-      "price": 3247.31,
+      "price": 10372,
+      "minOrder": 30,
       "img": "https://i.ibb.co/Yyw4s1h/basic-toolkit.jpg",
       "stock": 13302,
       "description": "",
-      "name": "basic toolkit"
+      "name": "BASIC TOOLKIT"
     },
     {
-      "price": 3464.62,
+      "price": 12874,
+      "minOrder": 30,
       "img": "https://i.ibb.co/kHSBdPR/beta-tires-collection.jpg",
       "stock": 7411,
       "description": "",
-      "name": "beta tires collection"
+      "name": "BETA TIRES COLLECTION"
     },
     {
-      "price": 2254.16,
+      "price": 17458,
+      "minOrder": 30,
       "img": "https://i.ibb.co/8XkDD7v/custom-made-front-logo.jpg",
       "stock": 7805,
       "description": "",
-      "name": "custom made front logo"
+      "name": "CUSTOM MADE FRONT LOGO"
     },
     {
-      "price": 3569.69,
+      "price": 19565,
+      "minOrder": 100,
       "img": "https://i.ibb.co/ygP2Dqh/engine-module.jpg",
       "stock": 5042,
       "description": "",
-      "name": "engine module"
+      "name": "ENGINE MODULE"
     },
     {
-      "price": 3441.59,
+      "price": 15560,
+      "minOrder": 60,
       "img": "https://i.ibb.co/1nqTRFF/engine-pistons.jpg",
       "stock": 10989,
       "description": "",
-      "name": "engine pistons"
+      "name": "ENGINE PISTONS"
     }
   ]
