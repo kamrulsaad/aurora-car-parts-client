@@ -8,7 +8,7 @@ const AllProducts = () => {
   const [products, setProducts] = useState([])
 
   useEffect(() => {
-    axios.get('http://localhost:5000/products')
+    axios.get('https://aurora-car-parts.herokuapp.com/products')
       .then(data => setProducts(data.data))
   }, [])
 

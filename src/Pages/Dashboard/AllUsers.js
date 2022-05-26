@@ -6,7 +6,7 @@ import UserRow from './UserRow';
 
 const AllUsers = () => {
 
-    const {data: allUsers, isLoading, refetch} = useQuery('allUsers', () => axiosPrivate.get('http://localhost:5000/allUsers'))
+    const {data: allUsers, isLoading, refetch} = useQuery('allUsers', () => axiosPrivate.get('https://aurora-car-parts.herokuapp.com/allUsers'))
     if(isLoading) return <Loading></Loading>
 
     return (

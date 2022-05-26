@@ -6,7 +6,7 @@ import Blog from './Blog';
 
 const Blogs = () => {
 
-    const { data: blogs, isLoading } = useQuery('blogs', () => axios.get('http://localhost:5000/blogs'))
+    const { data: blogs, isLoading } = useQuery('blogs', () => axios.get('https://aurora-car-parts.herokuapp.com/blogs'))
 
     if (isLoading) return <Loading></Loading>
 

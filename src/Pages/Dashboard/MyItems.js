@@ -11,7 +11,7 @@ const MyItems = () => {
     const [user, loading] = useAuthState(auth)
 
     const {data: myOrders, isLoading, refetch} = useQuery(['myOrders', user], () =>
-        axiosPrivate.get(`http://localhost:5000/purchase?email=${user.email}`)
+        axiosPrivate.get(`https://aurora-car-parts.herokuapp.com/purchase?email=${user.email}`)
     )
 
 

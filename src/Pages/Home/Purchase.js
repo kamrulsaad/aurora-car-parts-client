@@ -16,7 +16,7 @@ const Purchase = () => {
     const [amountError, setAmountError] = useState('')
 
     useEffect(() => {
-        axiosPrivate.get(`http://localhost:5000/purchase/${id}`)
+        axiosPrivate.get(`https://aurora-car-parts.herokuapp.com/purchase/${id}`)
             .then(data => setProduct(data.data))
     }, [id])
 
@@ -40,7 +40,7 @@ const Purchase = () => {
             email: e.target.email.value,
         }
 
-        axios.post('http://localhost:5000/purchase', purchase)
+        axios.post('https://aurora-car-parts.herokuapp.com/purchase', purchase)
         .then(data => {
             if(data.data.success) {
                 toast.success(`Your Order for ${product.name} has been Placed`)

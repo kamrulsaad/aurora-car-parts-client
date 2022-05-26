@@ -18,7 +18,7 @@ const ManageOrderRow = ({ pd, index, refetch }) => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                axiosPrivate.delete(`http://localhost:5000/purchase?id=${_id}`)
+                axiosPrivate.delete(`https://aurora-car-parts.herokuapp.com/purchase?id=${_id}`)
                     .then(() => refetch())
                 Swal.fire(
                     'Deleted!',
@@ -30,7 +30,7 @@ const ManageOrderRow = ({ pd, index, refetch }) => {
     }
 
     const handleUpdate = () => {
-        axiosPrivate.put(`http://localhost:5000/purchase/${_id}`)
+        axiosPrivate.put(`https://aurora-car-parts.herokuapp.com/purchase/${_id}`)
             .then(data => {
                 if(data.data.modifiedCount){
                     toast.success("Order has been Shipped")

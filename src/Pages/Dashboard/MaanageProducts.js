@@ -6,7 +6,7 @@ import ManageProductsRow from './ManageProductsRow';
 
 const MaanageProducts = () => {
 
-    const {data: products, isLoading, refetch} = useQuery('products', () => axiosPrivate.get('http://localhost:5000/products'))
+    const {data: products, isLoading, refetch} = useQuery('products', () => axiosPrivate.get('https://aurora-car-parts.herokuapp.com/products'))
 
     if(isLoading) return <Loading></Loading>
 

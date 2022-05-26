@@ -6,7 +6,7 @@ import Loading from '../Shared/Loading'
 
 const Testimonials = () => {
 
-    const {data: reviews, isLoading} = useQuery('reviews', () => axiosPrivate.get('http://localhost:5000/reviews'))
+    const {data: reviews, isLoading} = useQuery('reviews', () => axiosPrivate.get('https://aurora-car-parts.herokuapp.com/reviews'))
 
     if(isLoading) return <Loading></Loading>
 

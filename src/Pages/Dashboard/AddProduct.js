@@ -36,7 +36,7 @@ const AddProduct = () => {
                 minOrder: parseInt(data.minOrder),
                 img: data.url
             }
-            axiosPrivate.post('http://localhost:5000/products', newProduct)
+            axiosPrivate.post('https://aurora-car-parts.herokuapp.com/products', newProduct)
                 .then(res => {
                     if (res.data.acknowledged) {
                         toast.success("Product Added Successfully")
@@ -71,7 +71,7 @@ const AddProduct = () => {
                             minOrder: parseInt(data.minOrder),
                             img
                         }
-                        axiosPrivate.post('http://localhost:5000/products', newProduct)
+                        axiosPrivate.post('https://aurora-car-parts.herokuapp.com/products', newProduct)
                             .then(res => {
                                 if (res.data.acknowledged) {
                                     toast.success("Product Added Successfully")

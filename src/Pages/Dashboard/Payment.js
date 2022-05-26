@@ -17,7 +17,7 @@ const Payment = () => {
 
     const [user, loading] = useAuthState(auth)
 
-    const { data: product, isLoading } = useQuery(['payment', id], () => axiosPrivate.get(`http://localhost:5000/payment/${id}`))
+    const { data: product, isLoading } = useQuery(['payment', id], () => axiosPrivate.get(`https://aurora-car-parts.herokuapp.com/payment/${id}`))
 
     if(isLoading || loading) return <Loading></Loading>
 

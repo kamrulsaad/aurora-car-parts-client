@@ -33,7 +33,7 @@ const AddReview = () => {
             hours: date.getHours(),
             minutes: date.getMinutes()
         }
-        axiosPrivate.post('http://localhost:5000/reviews', review)
+        axiosPrivate.post('https://aurora-car-parts.herokuapp.com/reviews', review)
         .then(data => {
             if(data.data.acknowledged){
                 toast.success('Your review is added')

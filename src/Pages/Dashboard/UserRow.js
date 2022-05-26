@@ -16,7 +16,7 @@ const UserRow = ({ index, user, refetch }) => {
             confirmButtonText: 'Yes!'
         }).then((result) => {
             if (result.isConfirmed) {
-                axiosPrivate.put(`http://localhost:5000/user/admin/${email}`)
+                axiosPrivate.put(`https://aurora-car-parts.herokuapp.com/user/admin/${email}`)
                     .then(() => refetch())
                 Swal.fire(
                     'Done!',

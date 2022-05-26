@@ -14,7 +14,7 @@ const CheckoutForm = ({ product }) => {
     const { payableAmount, userName, email, _id } = product
 
     useEffect(() => {
-        fetch("http://localhost:5000/create-payment-intent", {
+        fetch("https://aurora-car-parts.herokuapp.com/create-payment-intent", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -84,7 +84,7 @@ const CheckoutForm = ({ product }) => {
                 transactionId: paymentIntent.id
             }
 
-            axiosPrivate.patch(`http://localhost:5000/purchase/${_id}`, payment)
+            axiosPrivate.patch(`https://aurora-car-parts.herokuapp.com/purchase/${_id}`, payment)
             .then(data => console.log(data))
 
             // fetch(`https://doctors-portal-server-by-saad.herokuapp.com/booking/${_id}`, {

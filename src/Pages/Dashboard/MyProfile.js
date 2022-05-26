@@ -38,7 +38,7 @@ const MyProfile = () => {
                         linkedIn: data.linkedIn,
                         image: img
                     }
-                    axiosPrivate.put(`http://localhost:5000/update/${user?.email}`, updatedUser)
+                    axiosPrivate.put(`https://aurora-car-parts.herokuapp.com/update/${user?.email}`, updatedUser)
                         .then(res => {
                             if (res.data.acknowledged) {
                                 toast.success("Profile Updated Successfully")

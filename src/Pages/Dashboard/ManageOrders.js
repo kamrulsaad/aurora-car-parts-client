@@ -6,7 +6,7 @@ import ManageOrderRow from './ManageOrderRow';
 
 const ManageOrders = () => {
 
-    const {data : orders, isLoading, refetch} = useQuery('orders', () => axiosPrivate.get('http://localhost:5000/orders'))
+    const {data : orders, isLoading, refetch} = useQuery('orders', () => axiosPrivate.get('https://aurora-car-parts.herokuapp.com/orders'))
 
     if(isLoading) return <Loading></Loading>
 

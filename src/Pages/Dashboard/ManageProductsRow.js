@@ -17,7 +17,7 @@ const ManageProductsRow = ({pd, index, refetch}) => {
             confirmButtonText: 'Yes, delete it!'
           }).then((result) => {
             if (result.isConfirmed) {
-                axiosPrivate.delete(`http://localhost:5000/products/?id=${_id}`)
+                axiosPrivate.delete(`https://aurora-car-parts.herokuapp.com/products/?id=${_id}`)
                 .then(() => refetch())
               Swal.fire(
                 'Deleted!',

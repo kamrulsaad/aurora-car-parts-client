@@ -18,7 +18,7 @@ const MyItemsRow = ({ index, od, refetch }) => {
             confirmButtonText: 'Yes, delete it!'
           }).then((result) => {
             if (result.isConfirmed) {
-                axiosPrivate.delete(`http://localhost:5000/purchase?id=${_id}`)
+                axiosPrivate.delete(`https://aurora-car-parts.herokuapp.com/purchase?id=${_id}`)
                 .then(() => refetch())
               Swal.fire(
                 'Deleted!',
