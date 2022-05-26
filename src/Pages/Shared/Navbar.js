@@ -13,10 +13,9 @@ const Navbar = () => {
     let userName;
 
     if(user?.displayName){
-        userName = user?.displayName.split(' ')[0]
+        userName = user?.displayName?.split(' ')[0]
     }
     
-    console.log(user?.displayName);
 
     const menuItems = <>
         <li><NavLink to='/'>Home</NavLink> </li>

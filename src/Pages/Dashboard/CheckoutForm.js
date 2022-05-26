@@ -85,19 +85,6 @@ const CheckoutForm = ({ product }) => {
             }
 
             axiosPrivate.patch(`https://aurora-car-parts.herokuapp.com/purchase/${_id}`, payment)
-            .then(data => console.log(data))
-
-            // fetch(`https://doctors-portal-server-by-saad.herokuapp.com/booking/${_id}`, {
-            //     method: 'PATCH', 
-            //     headers: {
-            //         "Content-Type": "application/json",
-            //         'authorization': `Bearer ${localStorage.getItem('accessToken')}`
-            //     },
-            //     body: JSON.stringify(payment)
-            // })
-            // .then(res => res.json())
-            // .then(data => console.log(data))
-
         }
 
     };
