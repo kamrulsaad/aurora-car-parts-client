@@ -5,7 +5,7 @@ import axiosPrivate from '../../API/axiosPrivate';
 
 const MyItemsRow = ({ index, od, refetch }) => {
 
-    const { product, purchaseAmount, payableAmount, paid, _id, transactionId } = od
+    const { product, purchaseAmount, payableAmount, paid, _id, transactionId, status } = od
 
     const handleDelete = () => {
         Swal.fire({
@@ -26,8 +26,7 @@ const MyItemsRow = ({ index, od, refetch }) => {
                 'success'
               )
             }
-        })
-        
+        })   
     }
 
     return (
@@ -43,6 +42,8 @@ const MyItemsRow = ({ index, od, refetch }) => {
                     <button onClick={handleDelete} className='btn btn-sm btn-error '>Cancel Order</button>
                 </>}
             </td>
+            <td>{status ? <button className='btn btn-sm btn-accent'>{status}</button> :
+            <button className='btn btn-xs btn-error'>Unpaid</button>}</td>
         </tr>
     )
 };

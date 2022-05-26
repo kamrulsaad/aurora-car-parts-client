@@ -29,6 +29,7 @@ const MyItems = () => {
                             <th>Order Amount</th>
                             <th>Total Price</th>
                             <th>Actions</th>
+                            <th>Status</th>
                         </tr>
                     </thead>
                     <tbody>
