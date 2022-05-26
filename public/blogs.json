@@ -1,0 +1,26 @@
+[
+    {
+        "question": "How will you improve the performance of a React Application?",
+        "answer": "We can optimize a react app by keeping component states local where necessary, lazy Loading images in react, memoizing react components to prevent unnecessary re-renders."
+    },
+    {
+        "question": "What are the different ways to manage a state in a React application?",
+        "answer": "Among many systems available, using hooks like useState() or useReducer(), states can be easily taken care of. ALso there is a popular library for this purpose named 'Redux'."
+    },
+    {
+        "question": "How does prototypical inheritance work?",
+        "answer": "It is basically a method for adding methods and properties in objects of javascript, By this method, an object can inherit the properties and method of another object."
+    },
+    {
+        "question": "Why you do not set the state directly in React?",
+        "answer": "We might lose the control over our state by directly setting a state in our component and in all the components the state is present in. The updating process of the state will be much more complex."
+    },
+    {
+        "question": "How will you implement a search to find products by name from an array of objects?",
+        "answer": "Using filter: product.find(pd => pd.name) ; Using find: product.find(pd => pd.name)"
+    },
+    {
+        "question": "What is a unit test? Why should write unit tests?",
+        "answer": "Unit testing involves testing individual components of the software program or application. The main purpose behind this is to check that all the individual parts are working as intended."
+    }
+]

@@ -1,14 +1,15 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Manufacturing = () => {
     return (
         <div class="hero min-h-screen" style={{"backgroundImage": "url(https://www.entertales.com/wp-content/uploads/carmanufacturers-7.jpg)"}}>
-            <div class="hero-overlay bg-opacity-60"></div>
+            <div class="hero-overlay bg-opacity-90 bg-gray-500"></div>
             <div class="hero-content text-center text-neutral-content">
-                <div class="max-w-md">
-                    <h1 class="mb-5 text-5xl font-bold">Hello there</h1>
-                    <p class="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-                    <button class="btn btn-accent">Get Started</button>
+                <div class="max-w-md text-white">
+                    <h1 class="mb-5 text-5xl font-bold">Lets wait no more...</h1>
+                    <p class="mb-5">Start by logging in. Your Information is fully secured with us. We highly encourage your coperation in building and growing our business.</p>
+                    <Link to='/login' class="btn btn-outline">Login Now</Link>
                 </div>
             </div>
         </div>

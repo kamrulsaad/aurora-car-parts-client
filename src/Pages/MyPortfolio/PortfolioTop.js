@@ -1,4 +1,5 @@
 import React from 'react';
+import profile from '../../assets/Pics/profile.png'
 
 const PortfolioTop = () => {
     return (
@@ -6,7 +7,7 @@ const PortfolioTop = () => {
             <div className="flex flex-col max-w-screen-lg overflow-hidden bg-white border rounded shadow-sm lg:flex-row sm:mx-auto">
                 <div className="relative lg:w-1/2">
                     <img
-                        src="https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
+                        src={profile}
                         alt=""
                         className="object-cover w-full lg:absolute h-80 lg:h-full"
                     />
