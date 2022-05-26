@@ -30,7 +30,7 @@ const MyItemsRow = ({ index, od, refetch }) => {
     }
 
     return (
-        <tr class="hover">
+        <tr className="hover">
             <th>{index + 1}</th>
             <td className='capitalize'>{product}</td>
             <td>{purchaseAmount}</td>

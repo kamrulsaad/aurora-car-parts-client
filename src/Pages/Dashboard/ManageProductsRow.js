@@ -29,7 +29,7 @@ const ManageProductsRow = ({pd, index, refetch}) => {
     }
 
     return (
-        <tr class="hover">
+        <tr className="hover">
             <th>{index + 1}</th>
             <td className='capitalize'>{name}</td>
             <td>${price}</td>

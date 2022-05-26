@@ -53,10 +53,10 @@ const Purchase = () => {
     return (
         <div className='mt-16 lg:mt-8 min-h-screen flex flex-wrap gap-20 items-center justify-center'>
             <ProductsCard pd={product} />
-            <div class="divider divider-horizontal"></div>
+            <div className="divider divider-horizontal"></div>
 
-            <div class="card w-96 bg-base-300 shadow-xl">
-                <div class="card-body">
+            <div className="card w-96 bg-base-300 shadow-xl">
+                <div className="card-body">
                     <form onSubmit={handlePurchaseOrder}>
 
                         <h1 className='text-center text-lg font-semibold underline mb-4 capitalize'>Order For: {product.name}</h1>
@@ -106,7 +106,7 @@ const Purchase = () => {
                                 type="number" name='amount' required
                                 className="input input-bordered w-full" />
                             <label className="label">
-                                <span class="label-text-alt text-red-600 mb-2">{amountError}</span>
+                                <span className="label-text-alt text-red-600 mb-2">{amountError}</span>
                             </label>
                         </div>
 

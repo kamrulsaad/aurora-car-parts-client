@@ -12,8 +12,8 @@ const AllUsers = () => {
     return (
         <div className='w-full'>
             <h1 className='text-xl font-semibold text-center'> ALL USERS</h1>
-            <div class="overflow-x-auto w-full mt-2">
-                <table class="table w-full">
+            <div className="overflow-x-auto w-full mt-2">
+                <table className="table w-full">
                     <thead>
                         <tr>
                             <th></th>

@@ -176,11 +176,11 @@ const AddProduct = () => {
                                 className="input input-bordered w-full" />
                         </div>
 
-                        <div class="divider">or</div>
+                        <div className="divider">or</div>
 
-                        <div class="flex justify-center">
-                            <div class="w-96">
-                                <input {...register("file")} class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-base-200 bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-base-200 focus:border-blue-600 focus:outline-none" type="file" id="formFile" />
+                        <div className="flex justify-center">
+                            <div className="w-96">
+                                <input {...register("file")} className="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-base-200 bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-base-200 focus:border-blue-600 focus:outline-none" type="file" id="formFile" />
                             </div>
                         </div>
 

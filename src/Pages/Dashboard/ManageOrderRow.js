@@ -42,7 +42,7 @@ const ManageOrderRow = ({ pd, index, refetch }) => {
     }
 
     return (
-        <tr class="hover">
+        <tr className="hover">
             <th>{index + 1}</th>
             <td className='capitalize'>{product}</td>
             <td>${payableAmount}</td>
@@ -50,7 +50,7 @@ const ManageOrderRow = ({ pd, index, refetch }) => {
             <td>
                 {userName}
                 <br />
-                <span class="badge badge-ghost badge-sm">{email}</span>
+                <span className="badge badge-ghost badge-sm">{email}</span>
             </td>
             <td>
                 {

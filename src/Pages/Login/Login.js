@@ -30,14 +30,14 @@ const Login = () => {
 
 
     return (
-        <div class="hero min-h-screen bg-base-200 mt-16 lg:mt-0">
-            <div class="hero-content flex-col gap-12 lg:flex-row-reverse">
-                <div class="text-center lg:text-left">
-                    <h1 class="text-5xl font-bold">Login now!</h1>
-                    <p class="py-6 max-w-lg">Join our worldwide services today. You only choose and we create what you need. </p>
+        <div className="hero min-h-screen bg-base-200 mt-16 lg:mt-0">
+            <div className="hero-content flex-col gap-12 lg:flex-row-reverse">
+                <div className="text-center lg:text-left">
+                    <h1 className="text-5xl font-bold">Login now!</h1>
+                    <p className="py-6 max-w-lg">Join our worldwide services today. You only choose and we create what you need. </p>
                 </div>
-                <div class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-                    <div class="card-body">
+                <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+                    <div className="card-body">
                         <h1 className='text-xl text-center font-semibold'>Login Now</h1>
                         <form onSubmit={handleSubmit(onSubmit)}>
 
@@ -95,7 +95,7 @@ const Login = () => {
 
                         </form>
                         <p className='text-center'><small>New to Aurora Par Parts? ? <span className='text-primary'> <Link to='/signup'> Create New Account</Link> </span></small></p>
-                        <div class="divider">OR</div>
+                        <div className="divider">OR</div>
                         <button onClick={() => googlesignIn()} className='btn btn-accent'>sign in with google</button>
                     </div>
                 </div>

@@ -33,9 +33,9 @@ const UserRow = ({ index, user, refetch }) => {
                 {index + 1}
             </th>
             <td>
-                <div class="flex items-center space-x-3">
-                    <div class="avatar">
-                        <div class="mask mask-squircle w-12 h-12">
+                <div className="flex items-center space-x-3">
+                    <div className="avatar">
+                        <div className="mask mask-squircle w-12 h-12">
                             {
                                 image ? <img src={image} alt="Avatar Tailwind CSS Component" /> :
                                     <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 mt-1 " viewBox="0 0 20 20" fill="currentColor">
@@ -45,21 +45,21 @@ const UserRow = ({ index, user, refetch }) => {
                         </div>
                     </div>
                     <div>
-                        <div class="font-bold">{name}</div>
-                        <div class="text-sm opacity-50">{location}</div>
+                        <div className="font-bold">{name}</div>
+                        <div className="text-sm opacity-50">{location}</div>
                     </div>
                 </div>
             </td>
             <td>
                 {education}
                 <br />
-                <span class="badge badge-ghost badge-sm underline"><a href={linkedIn} target="_blank" rel="noopener noreferrer">LinkedIn Profile</a></span>
+                <span className="badge badge-ghost badge-sm underline"><a href={linkedIn} target="_blank" rel="noopener noreferrer">LinkedIn Profile</a></span>
             </td>
             <td>{email}</td>
             <th>
                 {
-                    role === "Admin" ? <button class="btn btn-warning text-gray-100 btn-sm">Admin</button> :
-                        <button onClick={handleMakeAdmin} class="btn btn-primary btn-xs">Make Admin</button>
+                    role === "Admin" ? <button className="btn btn-warning text-gray-100 btn-sm">Admin</button> :
+                        <button onClick={handleMakeAdmin} className="btn btn-primary btn-xs">Make Admin</button>
                 }
             </th>
         </tr>

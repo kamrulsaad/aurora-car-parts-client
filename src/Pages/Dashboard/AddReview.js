@@ -53,7 +53,7 @@ const AddReview = () => {
                     size={24}
                     activeColor="#0000cd"
                 />
-                <textarea name='comment' class="textarea textarea-bordered w-full mt-3" placeholder="Your Comment"></textarea>
+                <textarea name='comment' className="textarea textarea-bordered w-full mt-3" placeholder="Your Comment"></textarea>
                 <input className='btn btn-outline w-full mt-2' type="submit" value='Comment' />
             </form>
         </div>

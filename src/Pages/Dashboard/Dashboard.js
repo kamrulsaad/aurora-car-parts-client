@@ -14,15 +14,15 @@ const Dashboard = () => {
     if (loading || isLoading) return <Loading></Loading>
 
     return (
-        <div class="drawer drawer-mobile mt-16">
-            <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
-            <div class="drawer-content flex flex-col items-center ">
+        <div className="drawer drawer-mobile mt-16">
+            <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
+            <div className="drawer-content flex flex-col items-center ">
                 <h1 className='text-2xl mt-2 font-bold '>Welcome to Dashboard</h1>
                 <Outlet />
             </div>
-            <div class="drawer-side">
-                <label for="my-drawer-2" class="drawer-overlay"></label>
-                <ul class="menu p-4 gap-2 overflow-y-auto w-80 bg-base-100 text-base-content">
+            <div className="drawer-side">
+                <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
+                <ul className="menu p-4 gap-2 overflow-y-auto w-80 bg-base-100 text-base-content">
                     <li><Link to='/dashboard'>My Profile</Link></li>
                     {!admin.data.admin && <>
                         <li><Link to='/dashboard/myItems'>My Items</Link></li>
